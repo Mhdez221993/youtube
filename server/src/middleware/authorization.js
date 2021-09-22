@@ -3,13 +3,35 @@ import jwt from "jsonwebtoken";
 
 const prisma = new PrismaClient();
 
+// export async function getAuthUser(req, res, next) {
+//   if (!req.cookies.token) {
+//     req.user = null;
+//     return next();
+//   }
+
+//   const token = req.cookies.token;
+//   const decoded = jwt.verify(token, process.env.JWT_SECRET);
+
+//   const user = await prisma.user.findUnique({
+//     where: {
+//       id: decoded.id,
+//     },
+//     include: {
+//       videos: true,
+//     },
+//   });
+
+//   req.user = user;
+//   next();
+// }
+
 export async function getAuthUser(req, res, next) {
-  if (!req.cookies.token) {
+  if (!req.headers.authorization) {
     req.user = null;
     return next();
   }
 
-  const token = req.cookies.token;
+  const token = req.headers.authorization;
   const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
   const user = await prisma.user.findUnique({
