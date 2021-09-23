@@ -1,4 +1,4 @@
-STOPPED AT MAKING UPLOAD VIDEO COMPONENT
+YouTube Clone
 
 ## Project Setup
 
