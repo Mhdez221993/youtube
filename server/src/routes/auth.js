@@ -78,35 +78,28 @@ async function googleLogin(req, res) {
   res.status(200).send(token);
 }
 
-// async function me(req, res) {
-//   const subscriptions = await prisma.subscription.findMany({
-//     where: {
-//       subscriberId: {
-//         equals: req.user.id,
-//       },
-//     },
-//   });
-
-//   const channelIds = subscriptions.map((sub) => sub.subscribedToId);
-
-//   const channels = await prisma.user.findMany({
-//     where: {
-//       id: {
-//         in: channelIds,
-//       },
-//     },
-//   });
-
-//   const user = req.user;
-//   user.channels = channels;
-
-//   res.status(200).json({ user });
-// }
-
 async function me(req, res) {
+  const subscriptions = await prisma.subscription.findMany({
+    where: {
+      subscriberId: {
+        equals: req.user.id,
+      },
+    },
+  });
+
+  const channelIds = subscriptions.map((sub) => sub.subscribedToId);
+
+  const channels = await prisma.user.findMany({
+    where: {
+      id: {
+        in: channelIds,
+      },
+    },
+  });
 
   const user = req.user;
-  // user.channels = channels;
+  user.channels = channels;
+
   res.status(200).json({ user });
 }
 
