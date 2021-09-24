@@ -1,4 +1,5 @@
 YouTube Clone
+This YouTube clone is build in the back with node.js and in the from with React
 
 ## Project Setup
 
