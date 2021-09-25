@@ -7,7 +7,7 @@ import { authenticate } from "../utils/api-client";
 function GoogleAuth() {
   return (
     <GoogleLogin
-      clientId="your-client-id"
+      clientId="889268388205-3m3bm43gasuh30792s0qtr83vc80g8rk.apps.googleusercontent.com"
       cookiePolicy="single_host_origin"
       onSuccess={authenticate}
       onFailure={authenticate}
