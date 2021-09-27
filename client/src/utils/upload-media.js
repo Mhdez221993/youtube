@@ -7,7 +7,7 @@ export async function uploadMedia({ type, file, preset }) {
 
   const data = await axios
     .post(
-      `https://api.cloudinary.com/v1_1/your-cloud-name/${type}/upload`,
+      `https://api.cloudinary.com/v1_1/mhdez-dev/${type}/upload`,
       formData
     )
     .then((res) => res.data);
