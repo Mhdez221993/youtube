@@ -6,7 +6,7 @@ export default function useAuthAction() {
   const user = useAuth();
   const { signIn } = useGoogleLogin({
     onSuccess: authenticate,
-    clientId: "your-client-id",
+    clientId: "889268388205-3m3bm43gasuh30792s0qtr83vc80g8rk.apps.googleusercontent.com",
   });
 
   function handleAuthAction(authAction, data) {
