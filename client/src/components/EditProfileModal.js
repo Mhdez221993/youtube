@@ -18,7 +18,7 @@ function EditProfileModal({ profile, closeModal }) {
       const cover = await uploadMedia({
         type: "image",
         file,
-        preset: "your-cover-preset",
+        preset: "rdkrtkrq",
       });
       setCover(cover);
     }
@@ -31,7 +31,7 @@ function EditProfileModal({ profile, closeModal }) {
       const avatar = await uploadMedia({
         type: "image",
         file,
-        preset: "your-avatar-preset",
+        preset: "viq8knvk",
       });
       setAvatar(avatar);
     }
