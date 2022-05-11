@@ -1,7 +1,11 @@
 # YouTube Clone
 
-This is my own youtube version, a fully functional application, that allows you to upload videos and songs.
+This is my own youtube version. A fully functional application, that allows you upload videos and songs.
 You can like, comment and subscribe to others' uploads
+
+![project image](project.PNG)
+
+## [Go Live](https://mhdez-youtube.herokuapp.com/)
 
 ## Project Setup
 
@@ -57,3 +61,26 @@ npm run dev
 - [Google Developer Console](https://console.developers.google.com/)
 - [Prisma Docs](https://prisma.io)
 - [Cloudinary Documentation](https://cloudinary.com/documentation/)
+
+## Author
+
+👤 **Moises Hernandez**
+
+- GitHub: [@Mhdez221993](https://github.com/Mhdez221993)
+- Twitter: [@MoisesH42060050](https://twitter.com/MoisesH42060050)
+- LinkedIn: [Moises Hernandez Coronado](https://www.linkedin.com/in/moises-hernandez-9bbb17145/)
+
+## Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/Mhdez221993/youtube/issues)
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- To my coding partner who helped me through all the work
+- To my Stand Up Team who kept my morale up!
