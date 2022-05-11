@@ -1,5 +1,7 @@
-YouTube Clone
-This YouTube clone is build in the back with node.js and in the from with React
+# YouTube Clone
+
+This is my own youtube version, a fully functional application, that allows you to upload videos and songs.
+You can like, comment and subscribe to others' uploads
 
 ## Project Setup
 
@@ -12,6 +14,12 @@ This YouTube clone is build in the back with node.js and in the from with React
 ```bash
 npm install
 cd client && npm install
+```
+
+3. In the root folder genrate migrations
+
+```
+npm run generate
 ```
 
 3. Run dev script in project root to run both server and client scripts simultaneously.
