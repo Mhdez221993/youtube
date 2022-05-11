@@ -34,6 +34,12 @@ npm run generate
 npm run dev
 ```
 
+## Add remote heroku
+
+```bash
+heroku git:remote -a mhdez-youtube
+```
+
 ## Global Dependencies Required
 
 - [Node 10+](https://node.js.org)
