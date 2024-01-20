@@ -1,8 +1,9 @@
 import { PrismaClient } from "@prisma/client";
 import express from "express";
-import jwt from "jsonwebtoken";
-import { protect } from "../middleware/authorization";
 import { OAuth2Client } from "google-auth-library";
+import jwt from "jsonwebtoken";
+
+import { protect } from "../middleware/authorization";
 
 const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 const prisma = new PrismaClient();
@@ -13,6 +14,17 @@ function getAuthRoutes() {
   router.post("/google-login", googleLogin);
   router.get("/me", protect, me);
   router.get("/signout", signout);
+
+  // test end point http://localhost:3001/api/v1/auth/curr-user
+  router.get("/curr-user", (req, res) => {
+    res.status(200).json({
+      user: {
+        id: "1234",
+        username: "test",
+        email: "test@mail.com",
+      },
+    });
+  });
 
   return router;
 }
@@ -75,7 +87,6 @@ async function me(req, res) {
 
   res.status(200).json({ user });
 }
-
 
 function signout(req, res) {
   res.clearCookie("token");
